@@ -1,0 +1,250 @@
+body {
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 700px;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+    height: 100%;
+    width: 1100px;
+    padding-right: 10px;
+    padding-left:  10px;
+}
+
+.inner-header{
+    background: #e7edea;
+    height: 78px;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+#header {
+    min-width: inherit;
+    height: 100%;
+    align-content: center;
+    background:white;
+}
+
+.top-header{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #12643e;
+}
+
+.top-header-text{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.logo {
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+div.nav {
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    margin: 0;
+}
+
+div.elnav {
+    height: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+
+}
+
+.elnav a:hover {
+    color: #12643e;
+    background-color: #a7bbb1;
+}
+
+.elnav a{
+    color: #12643e;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transition: 0.1s;
+}
+
+#footer {
+    min-width: 800px;
+    height: 100%;
+    align-content: center;
+    background:white;
+    min-width: inherit;
+}
+
+.bottom-footer{
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #12643e;
+}
+
+.bottom-footer-text{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+.filler{
+    flex-grow: 1;
+}
+
+.login-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.login-header-text{
+    font-size: 12px;
+    font-style: italic;
+    height: max-content;
+    margin-right: 10px;
+}
+.header-username{
+    all:inherit
+}
+
+.login-header a{
+    padding: 5px 5px;
+    text-decoration: none;
+    background: #e7edea;
+    color: #12643e;
+}
+
+.login-header a:hover{
+    padding: 5px 5px;
+    text-decoration: none;
+    background: #12643e;
+    color: #e7edea;
+}
+
+.block-news-header{
+    display: flex;
+    border-bottom: 2px solid #12643e;
+}
+
+.block-news-header-text{
+    margin: 10px 0px 0px 4px;
+    font-size: 22px;
+    color: #12643e;
+    flex-grow: 2;
+}
+
+.block-news-header-link{
+    width: max-content;
+    align-self: flex-end;
+    margin: 0px 4px 2px 0px;
+}
+.block-news-header-link a{
+    text-decoration: none;
+    color: #b7181a;
+}
+.block-news-header-link a:hover{
+    text-decoration: underline;
+}
+
+.block-news-query{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.block-news-single{
+    width: 22%;
+}
+.block-news-single a#news-link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #b7181a;
+}
+
+.block-news-single a#news-link:hover{
+    text-decoration: underline;
+}
+
+.block-news-single-date{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contacts-block{
+    margin: 10px 10px;
+}
+
+.contacts-block-single{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 10px transparent solid;
+    color: #12643e;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contacts-block-single:hover{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: wheat;
+}
+
+.contacts-block-single div{
+    align-self: center;
+    margin-left: 10px;
+}
+
+.content-1{
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-block-1{
+    width: 20%;
+    border: 1px black solid;
+    height: fit-content;
+}
+
+.content-2{
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-block-2{
+    font-size: 30px;
+    width: 300px;
+    background-color: wheat;
+}
+
+.content-block-3{
+    width: 30%;
+}

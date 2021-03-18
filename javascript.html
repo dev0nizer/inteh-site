@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="static/img/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <title>Зачетный сайт</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+    <div id="header">
+        <div class="wrapper">
+            <div class="top-header">
+                <div class="top-header-text">Сайт для демонтрации</div>
+            </div>
+            <div class="inner-header">
+                <a href="index.html"><div class="logo">МЕСТО ДЛЯ ЛОГОТИПА</div></a>
+                <div class="nav">
+                    <div class="elnav"><a href="contacts.html">Контакты</a></div>
+                    <div class="elnav"><a href="javascript.html">JavaScript</a></div>
+					<div class="elnav"><a href="index.html">NULL</a></div>
+					<div class="elnav"><a href="index.html">NULL2</a></div>
+					<div class="elnav"><a href="index.html">NULL3</a></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="wrapper">
+            <div id="movingdivwrapper" class="content-2">
+                <div id="movingdiv" class="content-block-2">Shake</div>
+                <div id="movingdiv1" class="content-block-2">Shake</div>
+                <div id="movingdiv2" class="content-block-2">Shake</div>
+                <script>
+                    obj = document.querySelector('#movingdiv');
+                    obj1 = document.querySelector('#movingdiv1');
+                    obj2 = document.querySelector('#movingdiv2');
+                    obj.style.position='relative'; 
+                    obj1.style.position='relative'; 
+                    obj2.style.position='relative'; 
+            
+                    function shake(interval) {
+                        obj.style.right = '10px';
+                        setTimeout(function(){
+                            obj.style.right = '0px';
+                        }, interval);
+                    }
+                    function shake1(interval) {
+                        obj1.style.right = '10px';
+                        setTimeout(function(){
+                            obj1.style.right = '0px';
+                        }, interval);
+                    }
+                    function shake2(interval) {
+                        obj2.style.right = '10px';
+                        setTimeout(function(){
+                            obj2.style.right = '0px';
+                        }, interval);
+                    }
+            
+                    setInterval(function(){
+                        shake(500);
+                        shake1(500);
+                        shake2(500);
+                    }, 1000)
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="wrapper">
+            <div class="bottom-footer">
+                <div class="bottom-footer-text">
+                    Made by dev0nizer 2021
+                </div>
+            </div>
+        </div>
+    </div>
+<script> </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
