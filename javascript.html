@@ -33,43 +33,25 @@
                 <div id="movingdiv" class="content-block-2">Shake</div>
                 <div id="movingdiv1" class="content-block-2">Shake</div>
                 <div id="movingdiv2" class="content-block-2">Shake</div>
-                <script>
-                    obj = document.querySelector('#movingdiv');
-                    obj1 = document.querySelector('#movingdiv1');
-                    obj2 = document.querySelector('#movingdiv2');
-                    obj.style.position='relative'; 
-                    obj1.style.position='relative'; 
-                    obj2.style.position='relative'; 
-            
-                    function shake(interval) {
-                        obj.style.right = '10px';
-                        setTimeout(function(){
-                            obj.style.right = '0px';
-                        }, interval);
-                    }
-                    function shake1(interval) {
-                        obj1.style.right = '10px';
-                        setTimeout(function(){
-                            obj1.style.right = '0px';
-                        }, interval);
-                    }
-                    function shake2(interval) {
-                        obj2.style.right = '10px';
-                        setTimeout(function(){
-                            obj2.style.right = '0px';
-                        }, interval);
-                    }
-            
-                    setInterval(function(){
-                        shake(500);
-                        shake1(500);
-                        shake2(500);
-                    }, 1000)
-                </script>
+                <script src="static/js/shake.js"></script>
+            </div>
+            <div class="content-3">
+                <div id="alertclick" class="alertclickbutton">
+                    Нажмите сюда
+                </div>
+                <div id="hiddenblockmouseover" class="alertclickbutton">Или сюда?</div>
+                <script src="static/js/main.js"></script>
+            </div>
+            <div class="content-3">
+                <input id="inputfield" type="text" class="inputfield" placeholder="Введите что-нибудь">
+                <div id="inputclick" class="alertclickbutton">
+                    Нажмите сюда
+                </div>
+                <div id="inputtextclick"></div>
             </div>
         </div>
     </div>
-
+    
     <div id="footer">
         <div class="wrapper">
             <div class="bottom-footer">
@@ -79,7 +61,8 @@
             </div>
         </div>
     </div>
-<script> </script>
+    <script> </script>
+    <script src="static/js/inputtext.js"></script>
 </body>
 </html>
 

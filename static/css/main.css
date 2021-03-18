@@ -248,3 +248,26 @@ div.elnav {
 .content-block-3{
     width: 30%;
 }
+
+.content-3{
+    margin: 10px 10px;
+    display: flex;
+}
+.alertclickbutton{
+    background-color:#12643e;
+    padding: 10px 10px;
+    border: 1px transparent solid;
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    margin-right: 10px;
+}
+
+.alertclickbutton#hiddenblockmouseover{
+    display: none;
+}
+
+#inputtextclick{
+    font-size: 22px;
+
+}
