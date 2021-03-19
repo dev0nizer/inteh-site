@@ -273,7 +273,7 @@ div.elnav {
 .labs-content-block{
     margin: 30px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .labs-content-block-single{
