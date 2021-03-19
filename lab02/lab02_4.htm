@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Lab02_4</title>
+</head>
+<body>
+    <script>
+        const colors = [
+          "white",
+          "aqua",
+          "blue",
+          "yellow",
+          "puple",
+          "red",
+          "lime",
+          "teal",
+          "silver",
+        ];
+        let size = 30;
+        let k = prompt("Введите число k");
+        document.write(`<h1>K = ${k}</h1>`)
+        document.write(`<table border=1 cellpadding=5>`);
+        for (let i = 1; i <= size; i++) {
+          document.write("<tr>");
+          for (let j = 1; j <= size; j++) {
+            document.write(`<td bgcolor="${colors[(i*j)%k]}" width="14" height="15" style="display: inline-block; box-sizing: border-box;">&nbsp</td>`);
+          }
+          document.write("</tr>");
+        }
+        document.write("</table>");
+      </script>
+</body>
+</html>

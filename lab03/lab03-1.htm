@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Borodin Iurii</title>
+    <style>
+        .blockinput{
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Введите начисленную сумму гонорара за селдующие месяцы</h3>
+    <form name="forminput" id="forminput">
+        <div class="blockinput">Январь: <input name="january" value="300" type="text"></div>
+        <div class="blockinput">Февраль: <input name="february" value="200" type="text"></div>
+        <div class="blockinput">Март: <input name="march" value="500" type="text"></div>
+        <div class="blockinput">Апрель: <input name="april" value="250" type="text"></div>
+        <div class="blockinput">Май: <input name="may" value="350" type="text"></div>
+        <div class="blockinput">Июнь: <input name="june" value="500" type="text"></div>
+    </form>
+    <button onclick="count(event)">Посчитать</button>
+    <button onclick="reset()">Сбросить</button>
+    <div id="result"></div>
+    <script>
+        let form = document.forms.forminput
+        let result = 0
+        function reset() 
+        {
+            document.getElementById("forminput").reset();
+            document.getElementById("result").innerHTML = ''
+        }
+        function count(my)
+        {
+            result += parseInt(form.january.value)
+            result += parseInt(form.february.value)
+            result += parseInt(form.march.value)
+            result += parseInt(form.april.value)
+            result += parseInt(form.may.value)
+            result += parseInt(form.june.value)
+            document.getElementById("result").innerHTML = `Средняя зарплата за полгода: ${result}`
+            result = 0
+        }
+    </script>
+
+</body>
+</html>

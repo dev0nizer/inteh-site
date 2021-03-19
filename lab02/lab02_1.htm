@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab02_1</title>
+</head>
+<body>
+  <script>
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май",
+    "Июнь", "Июль", "Август", "Сентябрь", "Октябрь","Ноябрь","Декабрь"]
+    let fio = prompt("Введите имя и фамилию сотрудника")
+    let monthid = prompt("Введите номер текущего месяца")
+    let monthsalary =[]
+    let summsalary = 0
+    for (let i=0; i<monthid; i++)
+    {
+      monthsalary.push(+prompt("Введите доход за месяц " + months[i]))
+      summsalary += monthsalary[i]
+    }
+    document.write(`<h3>${fio}</h3>`)
+    document.write(`<u>Общий доход: ${summsalary}</u>`)
+    document.write("<ol>")
+    for (let i=0; i<monthid; i++)
+    {
+      document.write(`<li>Подоходный налог за ${months[i]} : ${monthsalary[i]/100*13}`)
+      document.write(`<li>Выдача на руки за ${months[i]} : ${monthsalary[i]/100*87}`)
+    }
+  </script>
+</body>
+</html>

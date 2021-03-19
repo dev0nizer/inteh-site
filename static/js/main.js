@@ -5,7 +5,7 @@ elem.addEventListener('mouseout', function(){disabledisplay('hiddenblockmouseove
 elem.style.cursor = 'pointer';
 
 function popupmessage(text){
-    alert(text)
+    alert(text);
 }
 
 
