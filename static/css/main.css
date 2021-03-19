@@ -256,8 +256,6 @@ div.elnav {
 .alertclickbutton{
     background-color:#12643e;
     padding: 10px 10px;
-    border: 1px transparent solid;
-    border-radius: 5px;
     width: fit-content;
     color: white;
     margin-right: 10px;
@@ -270,4 +268,32 @@ div.elnav {
 #inputtextclick{
     font-size: 22px;
 
+}
+
+.labs-content-block{
+    margin: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.labs-content-block-single{
+    width: 100%;
+}
+
+.labs-content-block a{
+    display: flex;
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    width: 20%;
+    height: 100px;
+    background-color: #12643e;
+    justify-content: center;
+}
+
+.labs-content-block a div{
+    text-align: center;
+    height: fit-content;
+    align-content: center;
+    align-self:center;
 }
