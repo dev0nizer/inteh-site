@@ -1,0 +1,192 @@
+<html>
+  <head>
+    <title>Лабораторная 4-2</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Заполните анкету слушателя курсов</h1>
+    <form name="anketa">
+      <table border="1">
+        <tr>
+          <th>Название курсов</th>
+          <th>Продолжительность</th>
+          <th>Язык</th>
+          <th>Отчетность</th>
+          <th>Стоимость</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Информатика</td>
+          <td>
+            <input type="radio" name="inf-time" value="36" />36&nbsp;
+            <input type="radio" name="inf-time" value="64" />64&nbsp;
+            <input type="radio" name="inf-time" value="128" />128&nbsp;
+          </td>
+          <td>
+            <input type="checkbox" name="inf-lang-ru" />Русский<br>
+            <input type="checkbox" name="inf-lang-en" />Английский<br>
+          </td>
+          <td>
+            <input type="radio" name="inf-otchet" value="ekz" />Экзамен<br>
+            <input type="radio" name="inf-otchet" value="zach" />Зачет<br>
+          </td>
+          <td>
+              <input type="text" name="inf-price">
+          </td>
+          <td>
+              <input type="button" value="Вычислить" onclick="calcInf()">
+          </td>
+        </tr>
+        <tr>
+          <td>Базы данных</td>
+          <td>
+            <input type="radio" name="baz-time" value="36" />36&nbsp;
+            <input type="radio" name="baz-time" value="64" />64&nbsp;
+            <input type="radio" name="baz-time" value="128" />128&nbsp;
+          </td>
+          <td>
+            <input type="checkbox" name="baz-lang-ru" />Русский<br>
+            <input type="checkbox" name="baz-lang-en" />Английский<br>
+          </td>
+          <td>
+            <input type="radio" name="baz-otchet" value="ekz" />Экзамен<br>
+            <input type="radio" name="baz-otchet" value="zach" />Зачет<br>
+          </td>
+          <td>
+              <input type="text" name="baz-price">
+          </td>
+          <td>
+              <input type="button" value="Вычислить" onclick="calcBaz()">
+          </td>
+        </tr>
+        <tr>
+          <td>Ресурсы интернета</td>
+          <td>
+            <input type="radio" name="int-time" value="36" />36&nbsp;
+            <input type="radio" name="int-time" value="64" />64&nbsp;
+            <input type="radio" name="int-time" value="128" />128&nbsp;
+          </td>
+          <td>
+            <input type="checkbox" name="int-lang-ru" />Русский<br>
+            <input type="checkbox" name="int-lang-en" />Английский<br>
+          </td>
+          <td>
+            <input type="radio" name="int-otchet" value="ekz" />Экзамен<br>
+            <input type="radio" name="int-otchet" value="zach" />Зачет<br>
+          </td>
+          <td>
+              <input type="text" name="int-price">
+          </td>
+          <td>
+              <input type="button" value="Вычислить" onclick="calcInt()">
+          </td>
+        </tr>
+        <tr>
+          <td>Анализ алгоритмов</td>
+          <td>
+            <input type="radio" name="alg-time" value="36" />36&nbsp;
+            <input type="radio" name="alg-time" value="64" />64&nbsp;
+            <input type="radio" name="alg-time" value="128" />128&nbsp;
+          </td>
+          <td>
+            <input type="checkbox" name="alg-lang-ru" />Русский<br>
+            <input type="checkbox" name="alg-lang-en" />Английский<br>
+          </td>
+          <td>
+            <input type="radio" name="alg-otchet" value="ekz" />Экзамен<br>
+            <input type="radio" name="alg-otchet" value="zach" />Зачет<br>
+          </td>
+          <td>
+              <input type="text" name="alg-price">
+          </td>
+          <td>
+              <input type="button" value="Вычислить" onclick="calcAlg()">
+          </td>
+        </tr>
+      </table>
+      <div>
+        <input type="reset" value="Очистить"/>
+        <input type="button" value="Общая стоимость" onclick="calcGeneral()"/>
+      </div>
+    </form>
+
+    <script>
+      const f = document.forms.anketa;
+      function calcInf() {
+        const time = +f["inf-time"].value;
+        const langRu = f["inf-lang-ru"].checked;
+        const langEn = f["inf-lang-en"].checked;
+        const otchet = f["inf-otchet"].value;
+        f["inf-price"].value = 2 * time + (otchet === 'ekz' ? 3 : otchet === 'zach' ? 2 : 0) + (langEn ? time : 0);
+      }
+
+      function calcBaz() {
+        const time = +f["baz-time"].value;
+        const langRu = f["baz-lang-ru"].checked;
+        const langEn = f["baz-lang-en"].checked;
+        const otchet = f["baz-otchet"].value;
+        f["baz-price"].value = 3 * time + (otchet === 'ekz' ? 3 : otchet === 'zach' ? 2 : 0) + (langEn ? time : 0);
+      }
+
+      function calcInt() {
+        const time = +f["int-time"].value;
+        const langRu = f["int-lang-ru"].checked;
+        const langEn = f["int-lang-en"].checked;
+        const otchet = f["int-otchet"].value;
+        f["int-price"].value = 3 * time + (otchet === 'ekz' ? 3 : otchet === 'zach' ? 2 : 0) + (langEn ? time : 0);
+      }
+
+      function calcAlg() {
+        const time = +f["alg-time"].value;
+        const langRu = f["alg-lang-ru"].checked;
+        const langEn = f["alg-lang-en"].checked;
+        const otchet = f["alg-otchet"].value;
+        f["alg-price"].value = 2 * time + (otchet === 'ekz' ? 3 : otchet === 'zach' ? 2 : 0) + (langEn ? time : 0);
+      }
+
+      function calcGeneral() {
+        const win = open("", "displayWindow", "width=400, height=400,status=no,toolbar=no,menubar=no");
+        win.document.open();
+        const infPrice = +f["inf-price"].value;
+        const bazPrice = +f["baz-price"].value;
+        const intPrice = +f["int-price"].value;
+        const algPrice = +f["alg-price"].value;
+        let generalPrice = 0;
+        win.document.write("Вы выбрали курсы:<br><br><br>");
+        if (infPrice) {
+            win.document.write("<u>Информатика</u><br>");
+            win.document.write(`Продолжительность: ${f["inf-time"].value} часа<br>`);
+            win.document.write(`Язык: ${f["inf-lang-ru"].checked ? 'Русский' : ''} ${f["inf-lang-en"].checked ? 'Английский' : ''}<br>`);
+            win.document.write(`Отчетность: ${f["inf-otchet"].value === 'ekz' ? 'Экзамен' : f["inf-otchet"].value === 'zach' ? 'Зачет' : ''}<br>`);
+            win.document.write(`Стоимость курса: ${f["inf-price"].value} y.e.<br>`);
+            generalPrice+=infPrice;
+        }
+        if (bazPrice) {
+            win.document.write("<u>Информатика</u><br>");
+            win.document.write(`Продолжительность: ${f["baz-time"].value} часа<br>`);
+            win.document.write(`Язык: ${f["baz-lang-ru"].checked ? 'Русский' : ''} ${f["baz-lang-en"].checked ? 'Английский' : ''}<br>`);
+            win.document.write(`Отчетность: ${f["baz-otchet"].value === 'ekz' ? 'Экзамен' : f["baz-otchet"].value === 'zach' ? 'Зачет' : ''}<br>`);
+            win.document.write(`Стоимость курса: ${f["baz-price"].value} y.e.<br>`);
+            generalPrice+=bazPrice;
+        }
+        if (intPrice) {
+            win.document.write("<u>Ресурсы интернета</u><br>");
+            win.document.write(`Продолжительность: ${f["int-time"].value} часа<br>`);
+            win.document.write(`Язык: ${f["int-lang-ru"].checked ? 'Русский' : ''} ${f["int-lang-en"].checked ? 'Английский' : ''}<br>`);
+            win.document.write(`Отчетность: ${f["int-otchet"].value === 'ekz' ? 'Экзамен' : f["int-otchet"].value === 'zach' ? 'Зачет' : ''}<br>`);
+            win.document.write(`Стоимость курса: ${f["int-price"].value} y.e.<br>`);
+            generalPrice+=intPrice;
+        }
+        if (algPrice) {
+            win.document.write("<u>Анализ алгоритмов</u><br>");
+            win.document.write(`Продолжительность: ${f["alg-time"].value} часа<br>`);
+            win.document.write(`Язык: ${f["alg-lang-ru"].checked ? 'Русский' : ''} ${f["alg-lang-en"].checked ? 'Английский' : ''}<br>`);
+            win.document.write(`Отчетность: ${f["alg-otchet"].value === 'ekz' ? 'Экзамен' : f["alg-otchet"].value === 'zach' ? 'Зачет' : ''}<br>`);
+            win.document.write(`Стоимость курса: ${f["alg-price"].value} y.e.<br>`);
+            generalPrice+=algPrice;
+        }
+        win.document.write(`<br><br><br><b>Общая стоимость услуг: ${generalPrice} y.e.</b>`);
+      }
+    </script>
+  </body>
+</html>

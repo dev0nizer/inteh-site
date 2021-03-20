@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Лабораторная 3-2</title>
+  </head>
+  <body>
+    <form name="jz">
+      Выберите язык<br />
+      <input type="radio" id="i1" name="n" value="Здравствуйте!" />русский<br />
+      <input type="radio" id="i2" name="n" value="Hello!" />английский<br />
+      <input type="radio" id="i3" name="n" value="Bonjour!" />французский<br />
+      <input type="radio" id="i4" name="n" value="Guten Tag!" />немецкий<br />
+      <p>
+        Выберите цвет<br />
+        <input type="radio" name="n1" value="aqua" />aqua<br />
+        <input type="radio" name="n1" value="blue" />blue<br />
+        <input type="radio" name="n1" value="yellow" />yellow<br />
+        <input type="radio" name="n1" value="red" />red<br />
+        <input type="radio" name="n1" value="green" />green<br />
+      </p>
+
+      <p>
+        <input type="reset" value="Отменить" /><br />
+        <input type="button" value="Показать" onclick="show(jz)" />
+      </p>
+    </form>
+    <script>
+      function show(form) {
+        var d = document;
+        if (d.all("i1").checked) z = form.n[0].value;
+        else if (d.all("i2").checked) z = form.n[1].value;
+        else if (d.all("i3").checked) z = form.n[2].value;
+        else if (d.all("i4").checked) z = form.n[3].value;
+
+        var c;
+        if (form.n1[0].checked) c = form.n1[0].value;
+        else if (form.n1[1].checked) c = form.n1[1].value;
+        else if (form.n1[2].checked) c = form.n1[2].value;
+        else if (form.n1[3].checked) c = form.n1[3].value;
+        else if (form.n1[4].checked) c = form.n1[4].value;
+
+        d.write("<p><font size=10 color=", c, ">", z, "</font>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Lab5-3</title>
+  </head>
+  <body>
+    <img src="img/dg1.gif" height="30" width="20" /><img src="img/dg1.gif" height="30" width="20" /><img src="img/dgc.gif" height="30" width="20" /><img src="img/dg1.gif" height="30" width="20" /><img src="img/dg1.gif" height="30" width="20" /><img src="img/dgp.gif" height="30" width="20" /><img src="img/dg1.gif" height="30" width="20" /><img src="img/dg1.gif" height="30" width="20" />
+    <script language="JavaScript">
+      function clockTick() {
+        const now = new Date();
+        let hour = now.getHours().toString();
+        let minute = now.getMinutes().toString();
+        let second = now.getSeconds().toString();
+        let imgIndex = -1;
+        for (let i = 0; i < hour.length; ++i) {
+          setRis(hour.charAt(i), ++imgIndex);
+        }
+        setRis("c", ++imgIndex);
+        for (let i = 0; i < minute.length; ++i) {
+          setRis(minute.charAt(i), ++imgIndex);
+        }
+        setRis("p", ++imgIndex);
+        for (let i = 0; i < second.length; ++i) {
+          setRis(second.charAt(i), ++imgIndex);
+        }
+        setTimeout("clockTick()", 1000);
+      }
+
+      function setRis(imgNum, imgIndex) {
+        document.images[imgIndex].src = `img/dg${imgNum}.gif`;
+      }
+
+      setTimeout("clockTick()", 1000);
+    </script>
+  </body>
+</html>

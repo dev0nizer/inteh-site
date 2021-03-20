@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Лабораторная 3-3</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Горизонтальная лииня и ее свойства</h1>
+    <p>Выберите значение параметра и нажмите кнопку <b>Просмотр</b></p>
+    <table width="100%">
+        <tr>
+            <td id="line-td">
+                <div id="line" style="background-color:gray"></div>
+            </td>
+        </tr>
+    </table>
+
+    <form name="setts">
+        Значение параметра выравнивания<br />
+        <input type="radio" name="align" value="left" />LEFT<br />
+        <input type="radio" name="align" value="center" />CENTER<br />
+        <input type="radio" name="align" value="right" />RIGHT<br />
+      <div>
+        <label>Толщина линии: </label>
+        <input type="text" name="height" />
+      </div>
+      <div>
+        <label>Длина линии: </label>
+        <input type="text" name="width" />
+      </div>
+      <div>
+        <button onclick="show(event)">Просмотр</button>
+        <button onclick="refresh(event)">Обновить</button>
+      </div>
+    </form>
+    <script>
+      const form = document.forms.months;
+      const lineTD = document.querySelector("#line-td");
+      const line = document.querySelector("#line");
+      line.style.width = '300px';
+      line.style.height = '30px';
+      function show(e) {
+        e.preventDefault();
+        lineTD.align = document.forms.setts.align.value;
+        line.style.width = document.forms.setts.width.value + 'px';
+        line.style.height = document.forms.setts.height.value + 'px';
+      }
+
+      function refresh(e) {
+        e.preventDefault();
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
